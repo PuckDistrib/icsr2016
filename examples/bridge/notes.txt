@@ -1,0 +1,4 @@
+The hannemann_inspired code is basically the same as hannemann but the class are renamed to give a more meaningfull example.
+
+The constraint of hannemann_inspired was written in a refactoring perspective while the ones in hannemann and huston are more inspired from the gof intent. This explains the difference and the presence of an empty set in the candidates of the second ones.
+

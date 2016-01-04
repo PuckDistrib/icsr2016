@@ -1,0 +1,70 @@
+
+*******************************************
+*           ABOUT THE EXAMPLES            *
+*******************************************
+
+Each example folder contains at least a pattern code and a candidate code.
+A pattern code is a code exhibiting the Design Pattern and a cadidate code is a code producing the same result but having a less agile architecture.
+Sometime the candidate code directory is named "before" and the pattern directory "after" or "huston" or "hannemann" (since we take our example from them).
+
+For some examples you will also find refactoring directories. This code were obtained by doing refactoring justified by the violating constraints. They have been done with the idea to automate them, wich explain some choice that could look strange otherwise.
+
+*******************************************
+*          HOW TO USE THE FILES           *
+*******************************************
+
+In the root directory you will find a puck.jar.
+It's our prototype that parses 1.5 java sources to generate the corresponding access graph and check it against a set of constraints.
+
+*******************************************
+*         JUST TESTING THE EXAMPLES       *
+*******************************************
+
+- Select an example directory containing a decouple.pl file directly from the software with the "Application ?" button (or go in your terminal to one of these directories containing a decouple.pl file, and run the jar from this point, the default application directory is the current directory) 
+These are the folders corresponding to the following pattern :
+ /examples/patternChoosen/exampleVersionChoosen
+
+- Press "Load code" then "Run" and you should see a visual version of the access graph with the constraints violations in red
+
+*******************************************
+*       PRESSING ON RUN DO NOTHING        *
+*******************************************
+Once the code loaded (if you see the tree with named elements of your code it is done), pressing on "Run" do the following :
+
+- generate a prolog version of the acces graph in a file at the root of the application directory named after it.
+	-> in the directory d a d.pl file will be created
+
+- generate a run.sh (run.bat on windows) script that will launch the prolog interpret with the previous file. This will check the graph against the constraint rules found in the decouple file. Prolog will then generate a dot version of the graph with the edges violating the constraint colored in red. Once this is done, the interpret is escaped and the script try to display this graph.
+
+On windows and mac, the script will directly display the dot file. On linux the dot file is first converted in png format.
+
+If this process have not terminate alone, the only production you need to finish it manually is prolog graph file.
+
+You have to edit the first two line to set the correct path for the decouple file and the prolog constraint evaluator.
+Then you can launch it with the command "swipl -l myFile.pl"
+
+When lauched Puck create a evaluatorTmp directory where it has been started. This directory contains the prolog constraint evaluator. It's deleted if the application is closed correctly, otherwise you may have to delete it manually.
+
+You can also the prolog evaluator files in the src directory.
+
+You can edit the three last lines of the graph prolog file to deactivate the wellformedness check of the graph, the automatic generation of the dot file and the prolog interpret stop.
+
+
+*******************************************
+*       PLAYING WITH THE PROTOTYPE        *
+*******************************************
+
+-To select the sources directory you can either choose it in the GUI with the "Application ?" button or by starting the jar from the chosen directory.
+
+-You then press "Load code" to show a browsing tree of the named elements of the code.
+
+-You can then select in this tree what elements you want to see on the graph.
+There is also a helper button to select package only (usefull if the prototype is used with a big java application)
+
+-You can edit the constraints in the decouple.pl file that need to be at the root of the application directory.
+
+-To get more details on what happens when you click the run button and how to edit the generated prolog file see the "Pressing on run do nothing" section 
+
+. Either way this graphical version of the graph is displayed.
+
+

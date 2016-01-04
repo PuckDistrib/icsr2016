@@ -1,0 +1,72 @@
+digraph G {
+rankdir=LR;
+ranksep=equally;
+compound=true;
+subgraph cluster0 {
+label= <<FONT COLOR="black">&lt;&lt;package&gt;&gt; prototype</FONT>>
+subgraph cluster1 {
+label= <<FONT COLOR="black">&lt;&lt;package&gt;&gt; pattern</FONT>>
+18 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="18" BORDER="0"> <FONT COLOR="red"><B><U>Curly</U></B></FONT></TD></TR>
+<HR/><TR><TD PORT="20" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">Curly</FONT></TD></TR>
+<TR><TD PORT="19" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">slap_stick()</FONT></TD></TR>
+<TR><TD PORT="4" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">clone()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+2 [ label = <<TABLE BGCOLOR="#FFFF99"> <TR> <TD PORT="2" BORDER="0"> <FONT COLOR="black"><B>&lt;&lt;interface&gt;&gt;<BR/>Stooge</B></FONT></TD></TR>
+<HR/><TR><TD PORT="10" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">clone()</FONT></TD></TR>
+<TR><TD PORT="11" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">slap_stick()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+12 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="12" BORDER="0"> <FONT COLOR="red"><B><U>Larry</U></B></FONT></TD></TR>
+<HR/><TR><TD PORT="14" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">Larry</FONT></TD></TR>
+<TR><TD PORT="13" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">slap_stick()</FONT></TD></TR>
+<TR><TD PORT="8" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">clone()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+15 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="15" BORDER="0"> <FONT COLOR="red"><B><U>Moe</U></B></FONT></TD></TR>
+<HR/><TR><TD PORT="17" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">Moe</FONT></TD></TR>
+<TR><TD PORT="7" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">clone()</FONT></TD></TR>
+<TR><TD PORT="16" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">slap_stick()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+23 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="23" BORDER="0"> <FONT COLOR="black"><B>PrototypeDemo</B></FONT></TD></TR>
+<HR/><TR><TD PORT="3" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">roles</FONT></TD></TR>
+<HR/><TR><TD PORT="24" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">PrototypeDemo</FONT></TD></TR>
+<TR><TD PORT="9" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">main()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+21 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="21" BORDER="0"> <FONT COLOR="black"><B>Factory</B></FONT></TD></TR>
+<HR/><TR><TD PORT="6" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">prototypes</FONT></TD></TR>
+<HR/><TR><TD PORT="22" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">Factory</FONT></TD></TR>
+<TR><TD PORT="5" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">make_stooge()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+}
+}
+18:4 -> 18:18 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+18:4 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+18:4 -> 18:20 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+18:18 -> 2:2 [style = dashed, color = black, penwidth = 1, arrowhead = empty ];
+18:18 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+2:10 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+12:8 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+12:8 -> 12:12 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+12:8 -> 12:14 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+12:12 -> 2:2 [style = dashed, color = black, penwidth = 1, arrowhead = empty ];
+12:12 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+15:7 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+15:7 -> 15:17 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+15:7 -> 15:15 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+15:15 -> 2:2 [style = dashed, color = black, penwidth = 1, arrowhead = empty ];
+15:15 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+23:3 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+23:9 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+23:9 -> 23:3 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+23:9 -> 21:5 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+23:9 -> 2:11 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+23:9 -> 21:21 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:6 -> 18:18 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:6 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:6 -> 12:12 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:6 -> 12:14 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:6 -> 15:17 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:6 -> 15:15 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:6 -> 18:20 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:5 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:5 -> 21:6 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:5 -> 2:10 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+}

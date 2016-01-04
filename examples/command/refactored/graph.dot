@@ -1,0 +1,51 @@
+digraph G {
+rankdir=LR;
+ranksep=equally;
+compound=true;
+subgraph cluster0 {
+label= <<FONT COLOR="black">&lt;&lt;package&gt;&gt; command</FONT>>
+subgraph cluster1 {
+label= <<FONT COLOR="black">&lt;&lt;package&gt;&gt; refactored</FONT>>
+2 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="2" BORDER="0"> <FONT COLOR="black"><B>Button</B></FONT></TD></TR>
+<HR/><TR><TD PORT="4" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">Button</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+14 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="14" BORDER="0"> <FONT COLOR="black"><B>Main</B></FONT></TD></TR>
+<HR/><TR><TD PORT="15" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">Main</FONT></TD></TR>
+<TR><TD PORT="3" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">main()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+5 [ label = <<TABLE BGCOLOR="#FFFF99"> <TR> <TD PORT="5" BORDER="0"> <FONT COLOR="black"><B>&lt;&lt;interface&gt;&gt;<BR/>Action</B></FONT></TD></TR>
+<HR/><TR><TD PORT="6" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">clicked()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+8 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="8" BORDER="0"> <FONT COLOR="black"><B>Action1</B></FONT></TD></TR>
+<HR/><TR><TD PORT="10" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">Action1</FONT></TD></TR>
+<TR><TD PORT="9" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">clicked()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+11 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="11" BORDER="0"> <FONT COLOR="black"><B>Action2</B></FONT></TD></TR>
+<HR/><TR><TD PORT="13" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">Action2</FONT></TD></TR>
+<TR><TD PORT="12" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">clicked()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+}
+}
+subgraph cluster16 {
+label= <<FONT COLOR="black">&lt;&lt;package&gt;&gt; java</FONT>>
+subgraph cluster17 {
+label= <<FONT COLOR="black">&lt;&lt;package&gt;&gt; io</FONT>>
+18 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="18" BORDER="0"> <FONT COLOR="black"><B>PrintStream</B></FONT></TD></TR>
+<HR/><TR><TD PORT="46" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">println()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+}
+}
+2:4 -> 5:5 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+14:3 -> 11:13 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+14:3 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+14:3 -> 8:10 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+14:3 -> 2:4 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+14:3 -> 8:8 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+14:3 -> 11:11 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+8:9 -> 18:46 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+8:8 -> 5:5 [style = dashed, color = black, penwidth = 1, arrowhead = empty ];
+8:8 -> 5:5 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+11:12 -> 18:46 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+11:11 -> 5:5 [style = dashed, color = black, penwidth = 1, arrowhead = empty ];
+11:11 -> 5:5 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+}

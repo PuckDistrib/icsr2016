@@ -1,0 +1,66 @@
+digraph G {
+rankdir=LR;
+ranksep=equally;
+compound=true;
+subgraph cluster0 {
+label= <<FONT COLOR="black">&lt;&lt;package&gt;&gt; prototype</FONT>>
+subgraph cluster1 {
+label= <<FONT COLOR="black">&lt;&lt;package&gt;&gt; refactored</FONT>>
+4 [ label = <<TABLE BGCOLOR="#FFFF99"> <TR> <TD PORT="4" BORDER="0"> <FONT COLOR="black"><B>&lt;&lt;interface&gt;&gt;<BR/>Actor</B></FONT></TD></TR>
+<HR/><TR><TD PORT="10" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">create()</FONT></TD></TR>
+<TR><TD PORT="12" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">act()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+21 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="21" BORDER="0"> <FONT COLOR="black"><B>PrototypeDemo</B></FONT></TD></TR>
+<HR/><TR><TD PORT="9" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">roles</FONT></TD></TR>
+<HR/><TR><TD PORT="22" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">PrototypeDemo</FONT></TD></TR>
+<TR><TD PORT="5" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">main()</FONT></TD></TR>
+<TR><TD PORT="11" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">makeMovie()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+subgraph cluster2 {
+label= <<FONT COLOR="black">&lt;&lt;package&gt;&gt; actors</FONT>>
+3 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="3" BORDER="0"> <FONT COLOR="black"><B>Tragedian</B></FONT></TD></TR>
+<HR/><TR><TD PORT="8" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">Tragedian</FONT></TD></TR>
+<TR><TD PORT="7" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">act()</FONT></TD></TR>
+<TR><TD PORT="6" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">create()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+17 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="17" BORDER="0"> <FONT COLOR="black"><B>Comedian</B></FONT></TD></TR>
+<HR/><TR><TD PORT="20" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">Comedian</FONT></TD></TR>
+<TR><TD PORT="18" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">create()</FONT></TD></TR>
+<TR><TD PORT="19" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">act()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+13 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="13" BORDER="0"> <FONT COLOR="black"><B>Extra</B></FONT></TD></TR>
+<HR/><TR><TD PORT="16" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">Extra</FONT></TD></TR>
+<TR><TD PORT="15" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">act()</FONT></TD></TR>
+<TR><TD PORT="14" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">create()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+}
+}
+}
+4:10 -> 4:4 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:11 -> 4:4 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:11 -> 21:9 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:11 -> 4:10 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:9 -> 4:4 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:5 -> 21:11 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:5 -> 4:4 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:5 -> 4:12 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:5 -> 3:3 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:5 -> 21:9 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:5 -> 13:16 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:5 -> 3:8 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:5 -> 17:20 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:5 -> 17:17 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:5 -> 13:13 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+3:6 -> 3:3 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+3:6 -> 3:8 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+3:3 -> 4:4 [style = dashed, color = black, penwidth = 1, arrowhead = empty ];
+3:3 -> 4:4 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+17:18 -> 17:20 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+17:18 -> 17:17 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+17:17 -> 4:4 [style = dashed, color = black, penwidth = 1, arrowhead = empty ];
+17:17 -> 4:4 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+13:14 -> 13:16 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+13:14 -> 13:13 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+13:13 -> 4:4 [style = dashed, color = black, penwidth = 1, arrowhead = empty ];
+13:13 -> 4:4 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+}

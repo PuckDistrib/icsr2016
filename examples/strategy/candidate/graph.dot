@@ -1,0 +1,32 @@
+digraph G {
+rankdir=LR;
+ranksep=equally;
+compound=true;
+subgraph cluster0 {
+label= <<FONT COLOR="black">&lt;&lt;package&gt;&gt; strategy</FONT>>
+subgraph cluster1 {
+label= <<FONT COLOR="black">&lt;&lt;package&gt;&gt; candidate</FONT>>
+11 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="11" BORDER="0"> <FONT COLOR="black"><B>StrategyDemo</B></FONT></TD></TR>
+<HR/><TR><TD PORT="12" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">StrategyDemo</FONT></TD></TR>
+<TR><TD PORT="3" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">main()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+2 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="2" BORDER="0"> <FONT COLOR="black"><B>SortingContext</B></FONT></TD></TR>
+<HR/><TR><TD PORT="5" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">SortingContext</FONT></TD></TR>
+<TR><TD PORT="6" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">show()</FONT></TD></TR>
+<TR><TD PORT="4" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">methodUnrelatedWithTheSorting()</FONT></TD></TR>
+<TR><TD PORT="7" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">exchange()</FONT></TD></TR>
+<TR><TD PORT="9" ALIGN="LEFT" BORDER="0"><FONT COLOR="red"><U>linearSort()</U></FONT></TD></TR>
+<TR><TD PORT="10" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">sort()</FONT></TD></TR>
+<TR><TD PORT="8" ALIGN="LEFT" BORDER="0"><FONT COLOR="red"><U>bubbleSort()</U></FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+}
+}
+11:3 -> 2:5 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+11:3 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+2:8 -> 2:7 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+2:10 -> 2:8 [style = solid, color = red, penwidth = 5, arrowhead = normal ];
+2:10 -> 2:9 [style = solid, color = red, penwidth = 5, arrowhead = normal ];
+2:5 -> 2:10 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+2:5 -> 2:6 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+2:9 -> 2:7 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+}

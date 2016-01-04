@@ -1,0 +1,2 @@
+This candidate/pattern code is from huston. The candidate code has no class with the behavior of the proxy. Since we do not change the behavior, our refactored code does not exhib a proxy. 
+Nethertheless, the presence of the interface introduced to solve the constraint ease a futur add of the proxy.

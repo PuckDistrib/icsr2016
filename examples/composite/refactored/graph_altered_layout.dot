@@ -1,0 +1,61 @@
+digraph G {
+rankdir=RL;
+ranksep=1.5;
+compound=true;
+subgraph cluster0 {
+{rank=same;17;3}
+label= <<FONT COLOR="black">&lt;&lt;package&gt;&gt; composite</FONT>>
+17 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="17" BORDER="0"> <FONT COLOR="black"><B>CompositeDemo</B></FONT></TD></TR>
+<HR/><TR><TD PORT="18" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">CompositeDemo</FONT></TD></TR>
+<TR><TD PORT="4" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">main()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+3 [ label = <<TABLE BGCOLOR="#FFFF99"> <TR> <TD PORT="3" BORDER="0"> <FONT COLOR="black"><B>&lt;&lt;interface&gt;&gt;<BR/>FileAbstraction</B></FONT></TD></TR>
+<HR/><TR><TD PORT="19" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">add()</FONT></TD></TR>
+<TR><TD PORT="20" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">ls()</FONT></TD></TR>
+<TR><TD PORT="21" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">display()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+subgraph cluster1 {
+label= <<FONT COLOR="black">&lt;&lt;package&gt;&gt; fileKinds</FONT>>
+11 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="11" BORDER="0"> <FONT COLOR="black"><B>File</B></FONT></TD></TR>
+<HR/><TR><TD PORT="16" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">name</FONT></TD></TR>
+<HR/><TR><TD PORT="12" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">File</FONT></TD></TR>
+<TR><TD PORT="15" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">add()</FONT></TD></TR>
+<TR><TD PORT="13" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">display()</FONT></TD></TR>
+<TR><TD PORT="14" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">ls()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+2 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="2" BORDER="0"> <FONT COLOR="black"><B>Directory</B></FONT></TD></TR>
+<HR/><TR><TD PORT="9" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">name</FONT></TD></TR>
+<TR><TD PORT="10" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">files</FONT></TD></TR>
+<HR/><TR><TD PORT="5" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">Directory</FONT></TD></TR>
+<TR><TD PORT="6" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">add()</FONT></TD></TR>
+<TR><TD PORT="7" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">display()</FONT></TD></TR>
+<TR><TD PORT="8" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">ls()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+}
+}
+17:4 -> 11:12 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+17:4 -> 3:20 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+17:4 -> 2:5 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+17:4 -> 3:19 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+17:4 -> 3:3 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+17:4 -> 11:11 [style = solid, color = red, penwidth = 5, arrowhead = normal ];
+17:4 -> 2:2 [style = solid, color = red, penwidth = 5, arrowhead = normal ];
+11:14 -> 11:13 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+11:12 -> 11:16 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+11:13 -> 11:16 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+11:15 -> 3:3 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+11:11 -> 3:3 [style = dashed, color = black, penwidth = 1, arrowhead = empty ];
+11:11 -> 3:3 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+2:8 -> 2:7 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+2:7 -> 3:21 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+2:7 -> 3:3 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+2:7 -> 2:10 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+2:7 -> 2:9 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+2:5 -> 2:9 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+2:10 -> 3:3 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+2:6 -> 3:3 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+2:6 -> 2:10 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+2:2 -> 3:3 [style = dashed, color = black, penwidth = 1, arrowhead = empty ];
+2:2 -> 3:3 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+3:19 -> 3:3 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+}

@@ -1,0 +1,12 @@
+
+*******************************
+*        Dependancies         *
+*******************************
+
+The constraints checking is done with swi-prolog. You can download it at the following address:
+http://www.swi-prolog.org/
+
+To visualize the prolog graph graphviz is needed :
+http://www.graphviz.org/
+
+Make sure all applications are accessible from your path.

@@ -1,0 +1,109 @@
+digraph G {
+rankdir=LR;
+ranksep=equally;
+compound=true;
+subgraph cluster0 {
+label= <<FONT COLOR="black">&lt;&lt;package&gt;&gt; visitor</FONT>>
+subgraph cluster1 {
+label= <<FONT COLOR="black">&lt;&lt;package&gt;&gt; pattern</FONT>>
+2 [ label = <<TABLE BGCOLOR="#FFFF99"> <TR> <TD PORT="2" BORDER="0"> <FONT COLOR="black"><B>&lt;&lt;interface&gt;&gt;<BR/>Visitable</B></FONT></TD></TR>
+<HR/><TR><TD PORT="14" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">accept()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+21 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="21" BORDER="0"> <FONT COLOR="black"><B>BinaryTreeNode</B></FONT></TD></TR>
+<HR/><TR><TD PORT="9" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">right</FONT></TD></TR>
+<TR><TD PORT="3" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">left</FONT></TD></TR>
+<HR/><TR><TD PORT="7" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">BinaryTreeNode</FONT></TD></TR>
+<TR><TD PORT="22" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">accept()</FONT></TD></TR>
+<TR><TD PORT="5" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">getRight()</FONT></TD></TR>
+<TR><TD PORT="12" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">getLeft()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+33 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="33" BORDER="0"> <FONT COLOR="black"><B>Main</B></FONT></TD></TR>
+<HR/><TR><TD PORT="34" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">Main</FONT></TD></TR>
+<TR><TD PORT="16" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">main()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+29 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="29" BORDER="0"> <FONT COLOR="black"><B>TraversalVisitor</B></FONT></TD></TR>
+<HR/><TR><TD PORT="30" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">result</FONT></TD></TR>
+<HR/><TR><TD PORT="32" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">TraversalVisitor</FONT></TD></TR>
+<TR><TD PORT="10" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">visitLeaf()</FONT></TD></TR>
+<TR><TD PORT="31" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">report()</FONT></TD></TR>
+<TR><TD PORT="6" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">visitNode()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+23 [ label = <<TABLE BGCOLOR="#FFFF99"> <TR> <TD PORT="23" BORDER="0"> <FONT COLOR="black"><B>&lt;&lt;interface&gt;&gt;<BR/>BinaryTreeVisitor</B></FONT></TD></TR>
+<HR/><TR><TD PORT="8" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">visitNode()</FONT></TD></TR>
+<TR><TD PORT="24" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">report()</FONT></TD></TR>
+<TR><TD PORT="13" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">visitLeaf()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+15 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="15" BORDER="0"> <FONT COLOR="black"><B>BinaryTreeLeaf</B></FONT></TD></TR>
+<HR/><TR><TD PORT="17" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">value</FONT></TD></TR>
+<HR/><TR><TD PORT="18" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">BinaryTreeLeaf</FONT></TD></TR>
+<TR><TD PORT="20" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">accept()</FONT></TD></TR>
+<TR><TD PORT="19" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">getValue()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+25 [ label = <<TABLE BGCOLOR="#FFFF33"> <TR> <TD PORT="25" BORDER="0"> <FONT COLOR="black"><B>SummationVisitor</B></FONT></TD></TR>
+<HR/><TR><TD PORT="26" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">sum</FONT></TD></TR>
+<HR/><TR><TD PORT="28" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">SummationVisitor</FONT></TD></TR>
+<TR><TD PORT="11" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">visitLeaf()</FONT></TD></TR>
+<TR><TD PORT="27" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">report()</FONT></TD></TR>
+<TR><TD PORT="4" ALIGN="LEFT" BORDER="0"><FONT COLOR="black">visitNode()</FONT></TD></TR>
+</TABLE>>, shape = "none" ];
+}
+}
+2:14 -> 23:23 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:3 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:12 -> 21:3 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:12 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:5 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:5 -> 21:9 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:9 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:7 -> 21:3 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:7 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:7 -> 21:9 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:22 -> 23:23 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:22 -> 23:8 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+21:21 -> 2:2 [style = dashed, color = black, penwidth = 1, arrowhead = empty ];
+//21:21 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+33:16 -> 29:32 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+33:16 -> 25:28 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+33:16 -> 25:27 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+33:16 -> 21:21 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+33:16 -> 29:29 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+33:16 -> 15:18 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+33:16 -> 29:31 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+33:16 -> 15:15 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+33:16 -> 25:25 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+33:16 -> 21:7 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+33:16 -> 21:22 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+29:6 -> 2:14 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+29:6 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+29:6 -> 21:12 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+29:6 -> 21:5 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+29:6 -> 21:21 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+29:6 -> 29:30 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+29:31 -> 29:30 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+29:10 -> 15:19 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+29:10 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+29:10 -> 29:30 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+29:10 -> 15:15 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+29:29 -> 23:23 [style = dashed, color = black, penwidth = 1, arrowhead = empty ];
+//29:29 -> 23:23 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+23:13 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+23:8 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+15:19 -> 15:17 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+15:20 -> 23:13 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+15:20 -> 23:23 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+15:18 -> 15:17 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+15:15 -> 2:2 [style = dashed, color = black, penwidth = 1, arrowhead = empty ];
+//15:15 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+25:4 -> 21:3 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+25:4 -> 2:14 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+25:4 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+25:4 -> 21:21 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+25:4 -> 21:9 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+25:27 -> 25:26 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+25:11 -> 15:19 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+25:11 -> 2:2 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+25:11 -> 25:26 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+25:11 -> 15:15 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+25:25 -> 23:23 [style = dashed, color = black, penwidth = 1, arrowhead = empty ];
+//25:25 -> 23:23 [style = solid, color = black, penwidth = 1, arrowhead = normal ];
+}
